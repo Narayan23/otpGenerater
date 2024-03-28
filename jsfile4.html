@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box1{
+                height: 440px;
+                width: 400px;
+                background-color: rgb(240, 184, 72);
+                margin: 100px 450px;
+            }
+            .button1{
+                height: 50px;
+                width: 200px;
+                background-color: rgb(56, 180, 70);
+                border-radius: 29px;
+                border: none;
+                margin-top: 80px;
+                margin-left: 120px;
+            }
+            .text{
+                font-size: 18px;
+                font-family: sans-serif;
+               padding-top: 50px;
+                margin-left: 40px;
+               
+            }
+            .password{
+                font-size: 100px;
+                font-family: 'Times New Roman', Times, serif;
+                height: 150px;
+                width: 380px;
+                margin-left: 8px;
+                margin-top: 50px;
+                background-color: rgb(36, 161, 183);
+                padding-left: 5px;
+                padding-top: 10px;
+                text-align: center;
+                border-radius: 8px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box1"><p class="text">
+            Click the button and generate the OPT</p>
+            <button onclick="generate()" class="button1">
+                Click
+            </button>
+            <div  class="password">OPT</div>
+        </div>
+        <script>
+            function generate(){
+                const element1=document.querySelector('.password');
+                const element2=Math.random()*10000;
+                const element3=Math.floor(element2);
+                const element4 = element3;
+                if(element3<=999 && element3>=100){
+                element4='0'+element3;
+
+                }
+                else if(element3<=99 && element3>=10){
+                    element4='00'+element3;
+                }
+                
+                element1.innerHTML=element4;
+                // document.getElementsByClassName()
+            }
+
+        </script>
+    </body>
+</html>
